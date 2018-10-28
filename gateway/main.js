@@ -2,8 +2,8 @@ var mqtt = require('mqtt')
 var esp32CoAP = require('./modules/esp32CoAP.js')
 
 
-if (!process.env.GW_MQTT_SERVER || !process.env.GW_MQTT_USER || !process.env.GW_MQTT_PASSWORD) {
-  console.error('Missing MQTT config, please make sure to set $MQTT_SERVER, $MQTT_USER and $MQTT_PASSWORD')
+if (!process.env.GW_MQTT_SERVER) {
+  console.error('Missing MQTT config, please make sure to set $MQTT_SERVER and optionally $MQTT_USER and $MQTT_PASSWORD')
   process.exit(1)
 } else {
   var MQTT_SERVER = process.env.GW_MQTT_SERVER
@@ -75,7 +75,7 @@ coap.on('measurement', measurement => {
       unit: measurement.unit,
       timestamp: measurement.timestamp
     }
-    mqttClient.publish(`${PREFIX}/${TENANT}/${ID}/${name}`, JSON.stringify(data))
+    mqttClient.publish(`${PREFIX}/${TENANT}/${ID}/${measurement.name}`, JSON.stringify(data))
   }
 });
 

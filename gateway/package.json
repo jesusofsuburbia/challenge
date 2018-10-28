@@ -4,8 +4,9 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "mqtt": "2.18.8",
-    "coap": "0.22.0"
+    "coap": "0.22.0",
+    "mosca": "^2.8.3",
+    "mqtt": "2.18.8"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

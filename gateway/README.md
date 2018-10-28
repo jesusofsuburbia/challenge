@@ -19,6 +19,27 @@ Make sure to export your configuration as environment variables first (see below
 node main.js
 ```
 
+## Check MQTT messages
+
+* Install and run mosca 
+
+```
+npm install mosca
+node test/test-mosca.js
+```
+
+* Switch terminal and run
+
+```
+GW_MQTT_SERVER="mqtt://localhost" node main.js
+```
+
+* The log output of mosca should show messages like this
+
+```
+{"value":22.1,"unit":"C","timestamp":"2018-10-28T22:13:39.852Z"}
+```
+
 ### Configuration 
 
 To set a variable, run (for example):
