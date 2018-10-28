@@ -1,10 +1,11 @@
 {
-  "name": "t-gateway",
+  "name": "gateway",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "dependencies": {
     "mqtt": "2.18.8",
     "coap": "0.22.0"
-  }
+  },
+  "devDependencies": {}
 }
