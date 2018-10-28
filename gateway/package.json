@@ -7,5 +7,10 @@
     "mqtt": "2.18.8",
     "coap": "0.22.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }
