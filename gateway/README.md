@@ -37,7 +37,7 @@ GW_MQTT_SERVER="mqtt://localhost" node main.js
 * The log output of mosca should show messages like this
 
 ```
-{"value":22.1,"unit":"C","timestamp":"2018-10-28T22:13:39.852Z"}
+testprefix/testtenant/unknown_id_/temperature	 {"value":22.1,"unit":"C","timestamp":"2018-10-28T16:16:52.363Z"}
 ```
 
 ### Configuration 
