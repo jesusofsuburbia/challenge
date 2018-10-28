@@ -34,8 +34,6 @@ class esp32CoAP extends EventEmitter{
   parseResource(resourceString){
     var resource = {}
 
-    console.log(resourceString)
-
     resourceString.split(';')
       .forEach(value => {
         var urlMatches = value.match(COAP_URI_REGEX)
@@ -54,8 +52,6 @@ class esp32CoAP extends EventEmitter{
           }
         }
       })
-
-      console.log(resource)
     return resource
   }
 
