@@ -111,7 +111,11 @@ class esp32CoAP extends EventEmitter{
           })
         }
       })
-   })
+    })
+
+    if(this.observedResources.length == 0){
+      this.discoverResources()
+    }
   }
 
 
